@@ -1,4 +1,4 @@
-find / -name npm | ls -al
+find / -name npm 
 cd /opt/rh/rh-nodejs4/root/usr/bin/
 npm config set proxy http://10.243.241.41:8080
 npm config set https-proxy http://10.243.241.41:8080
