@@ -1,4 +1,4 @@
-ls -al
+find / -name npm
 cd nodejs
 npm config set proxy http://10.243.241.41:8080
 npm config set https-proxy http://10.243.241.41:8080
