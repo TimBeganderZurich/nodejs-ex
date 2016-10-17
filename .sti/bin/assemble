@@ -1,3 +1,16 @@
-/opt/rh/rh-nodejs4/root/usr/lib/node_modules/npm/bin/npm config set proxy http://10.243.241.41:8080
-/opt/rh/rh-nodejs4/root/usr/lib/node_modules/npm/bin/npm config set https-proxy http://10.243.241.41:8080
-/opt/rh/rh-nodejs4/root/usr/lib/node_modules/npm/bin/npm install
+
+#!/bin/bash
+echo "Before assembling"
+npm config set proxy http://10.243.241.41:8080
+npm config set https-proxy http://10.243.241.41:8080
+
+/usr/libexec/s2i
+rc=$?
+
+if [ $rc -eq 0 ]; then
+    echo "After successful assembling"
+else
+    echo "After failed assembling"
+fi
+
+exit $rc
